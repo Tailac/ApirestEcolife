@@ -49,7 +49,6 @@ public class Ecocliente implements Serializable {
 		this.email = email;
 	}
 	public String getSenha() {
-		
 		return senha;
 	}
 	public void setSenha(String senha) {

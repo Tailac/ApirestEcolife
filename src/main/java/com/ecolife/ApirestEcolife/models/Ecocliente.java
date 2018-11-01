@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.ecolife.ApirestEcolife.resources.Criptografia;
+
 @Entity
 @Table(name="TB_ECOCLIENTE")
 public class Ecocliente implements Serializable {
@@ -47,6 +49,7 @@ public class Ecocliente implements Serializable {
 		this.email = email;
 	}
 	public String getSenha() {
+		
 		return senha;
 	}
 	public void setSenha(String senha) {
@@ -67,6 +70,8 @@ public class Ecocliente implements Serializable {
 	public static long getSerialverionuid() {
 		return serialVerionUID;
 	}
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -27,7 +27,7 @@ public class Residuo implements Serializable {
 	private String tipoResiduo;
 	
 	@NotNull
-	private BigDecimal valorPontuacao;
+	private String valorPontuacao;
 	
 	private String informações;
 	
@@ -59,10 +59,10 @@ public class Residuo implements Serializable {
 	public void setTipoResiduo(String tipoResiduo) {
 		this.tipoResiduo = tipoResiduo;
 	}
-	public BigDecimal getValorPontuacao() {
+	public String getValorPontuacao() {
 		return valorPontuacao;
 	}
-	public void setValorPontuacao(BigDecimal valorPontuacao) {
+	public void setValorPontuacao(String valorPontuacao) {
 		this.valorPontuacao = valorPontuacao;
 	}
 	public String getInformações() {

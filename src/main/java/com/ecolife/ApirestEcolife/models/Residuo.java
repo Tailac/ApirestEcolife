@@ -39,7 +39,6 @@ public class Residuo implements Serializable {
 	@NotNull
 	private String status;
 	
-	
 
 	public long getId() {
 		return id;

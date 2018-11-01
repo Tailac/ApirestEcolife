@@ -53,7 +53,8 @@ public class Ecocliente implements Serializable {
 		return senha;
 	}
 	public void setSenha(String senha) {
-		this.senha = senha;
+		String pw = Criptografia.criptografar(senha);
+		this.senha = pw;
 	}
 	public String getPontuacao() {
 		return pontuacao;

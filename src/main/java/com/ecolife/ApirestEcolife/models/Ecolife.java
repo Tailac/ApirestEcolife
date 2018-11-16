@@ -28,7 +28,7 @@ public class Ecolife implements Serializable {
 	@NotNull
 	private String qrCode;
 	
-	private BigDecimal codigoSeguranca;
+	private String codigoSeguranca;
 	
 	@NotNull
 	private String status;
@@ -63,10 +63,10 @@ public class Ecolife implements Serializable {
 	public void setQrCode(String qrCode) {
 		this.qrCode = qrCode;
 	}
-	public BigDecimal getCodigoSeguranca() {
+	public String getCodigoSeguranca() {
 		return codigoSeguranca;
 	}
-	public void setCodigoSeguranca(BigDecimal codigoSeguranca) {
+	public void setCodigoSeguranca(String codigoSeguranca) {
 		this.codigoSeguranca = codigoSeguranca;
 	}
 	public String getStatus() {

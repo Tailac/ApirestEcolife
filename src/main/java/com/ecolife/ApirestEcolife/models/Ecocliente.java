@@ -24,12 +24,15 @@ public class Ecocliente implements Serializable {
 	private String nome;
 	private String email;
 	private String senha;
+	private String cpf;
 	private String pontuacao;
 	private String status;
 	
 
 	
-	
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 	public long getId() {
 		return id;
 	}
@@ -55,6 +58,11 @@ public class Ecocliente implements Serializable {
 		String pw = Criptografia.criptografar(senha);
 		this.senha = pw;
 	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+	
 	public String getPontuacao() {
 		return pontuacao;
 	}

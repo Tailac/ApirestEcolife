@@ -1,4 +1,4 @@
-package com.ecolife.ApirestEcolife.resources;
+package com.ecolife.ApirestEcolife.controller;
 
 import java.util.List;
 

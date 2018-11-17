@@ -1,8 +1,9 @@
-package com.ecolife.ApirestEcolife.resources;
+package com.ecolife.ApirestEcolife.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,8 +43,15 @@ public class EcolifeResource {
 	}
 		
 	@PostMapping("/ecolife")
-	public Ecolife salvaEcolife(@RequestBody Ecolife ecolife){
-		return ecolifeRepository.save(ecolife);
+	public ResponseEntity<Ecolife> salvaEcolife(@RequestBody Ecolife ecolife){
+		boolean ret = consultaQRCodeExistente(ecolife);
+		if(ret == false){
+			Ecolife novoEcolife = ecolifeRepository.save(ecolife);
+			return ResponseEntity.ok(novoEcolife);
+		}else{
+			return ResponseEntity.badRequest().build();
+		}
+		
 	}
 
 	@DeleteMapping("/ecolife")
@@ -54,6 +62,19 @@ public class EcolifeResource {
 	@PutMapping("/ecolife")
 	public Ecolife AtualizaEcolife(@RequestBody Ecolife ecolife){
 		return ecolifeRepository.save(ecolife);
+	}
+	
+	
+	
+	public boolean consultaQRCodeExistente(Ecolife ecolife){
+		
+		Ecolife eco =  ecolifeRepository.findByqrCode(ecolife.getQrCode());
+		if(eco == null){
+			return false;
+		}else{
+			return true;
+		}
+			
 	}
 
 }

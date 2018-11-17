@@ -1,4 +1,4 @@
-package com.ecolife.ApirestEcolife.resources;
+package com.ecolife.ApirestEcolife.controller;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

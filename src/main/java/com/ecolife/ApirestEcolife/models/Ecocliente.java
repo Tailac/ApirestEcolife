@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.ecolife.ApirestEcolife.resources.Criptografia;
+import com.ecolife.ApirestEcolife.controller.Criptografia;
 
 @Entity
 @Table(name="TB_ECOCLIENTE")

@@ -7,4 +7,5 @@ import com.ecolife.ApirestEcolife.models.Ecocliente;
 public interface EcoclienteRepository extends JpaRepository<Ecocliente, Long> {
 
 	Ecocliente findById(long id);
+	Ecocliente findByCpfOrEmail(String cpf, String email);
 }
